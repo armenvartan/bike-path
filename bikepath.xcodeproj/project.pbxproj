@@ -38,6 +38,8 @@
 		8AE403F5199D951100B926AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8AE403F4199D951100B926AB /* Main.storyboard */; };
 		C2813E40199E789700B19D69 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2813E3F199E789700B19D69 /* MapKit.framework */; };
 		C2813E42199E7BD800B19D69 /* dbc.gpx in Resources */ = {isa = PBXBuildFile; fileRef = C2813E41199E7BD800B19D69 /* dbc.gpx */; };
+		C4A8AA1352BB4328BF8724FC /* libPods-bikepathTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF274268AE67427797C8A1E2 /* libPods-bikepathTests.a */; };
+		FDBA2115138740DEA2BA2CE5 /* libPods-bikepath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 20477CD1EBE54049AA03F5A2 /* libPods-bikepath.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20477CD1EBE54049AA03F5A2 /* libPods-bikepath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bikepath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C2363F48F36466BABB5CAE6 /* Pods-bikepath.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikepath.xcconfig"; path = "Pods/Pods-bikepath.xcconfig"; sourceTree = "<group>"; };
+		824B528BADB64F5884CF7C26 /* Pods-bikepathTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikepathTests.xcconfig"; path = "Pods/Pods-bikepathTests.xcconfig"; sourceTree = "<group>"; };
 		8AB03323199DAD8A0036FF7A /* SearchMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchMapViewController.h; sourceTree = "<group>"; };
 		8AB03324199DAD8A0036FF7A /* SearchMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchMapViewController.m; sourceTree = "<group>"; };
 		8AB03326199DADA80036FF7A /* ResultsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsMapViewController.h; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		8AE403E8199D924200B926AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8AE403EA199D924200B926AB /* bikepathTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bikepathTests.m; sourceTree = "<group>"; };
 		8AE403F4199D951100B926AB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AF274268AE67427797C8A1E2 /* libPods-bikepathTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bikepathTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2813E3F199E789700B19D69 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C2813E41199E7BD800B19D69 /* dbc.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = dbc.gpx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +118,7 @@
 				8AE403CA199D924200B926AB /* UIKit.framework in Frameworks */,
 				8AB0332A199DB2930036FF7A /* GoogleMaps.framework in Frameworks */,
 				8AE403C6199D924200B926AB /* Foundation.framework in Frameworks */,
+				FDBA2115138740DEA2BA2CE5 /* libPods-bikepath.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +129,7 @@
 				8AE403DF199D924200B926AB /* XCTest.framework in Frameworks */,
 				8AE403E1199D924200B926AB /* UIKit.framework in Frameworks */,
 				8AE403E0199D924200B926AB /* Foundation.framework in Frameworks */,
+				C4A8AA1352BB4328BF8724FC /* libPods-bikepathTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +144,8 @@
 				8AE403E4199D924200B926AB /* bikepathTests */,
 				8AE403C4199D924200B926AB /* Frameworks */,
 				8AE403C3199D924200B926AB /* Products */,
+				5C2363F48F36466BABB5CAE6 /* Pods-bikepath.xcconfig */,
+				824B528BADB64F5884CF7C26 /* Pods-bikepathTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -170,6 +180,8 @@
 				8AE403C7199D924200B926AB /* CoreGraphics.framework */,
 				8AE403C9199D924200B926AB /* UIKit.framework */,
 				8AE403DE199D924200B926AB /* XCTest.framework */,
+				20477CD1EBE54049AA03F5A2 /* libPods-bikepath.a */,
+				AF274268AE67427797C8A1E2 /* libPods-bikepathTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -226,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AE403EE199D924200B926AB /* Build configuration list for PBXNativeTarget "bikepath" */;
 			buildPhases = (
+				77D49FAF18AA4C77B21C5606 /* Check Pods Manifest.lock */,
 				8AE403BE199D924200B926AB /* Sources */,
 				8AE403BF199D924200B926AB /* Frameworks */,
 				8AE403C0199D924200B926AB /* Resources */,
+				A006915C249549C7822ECA0A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,9 +257,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8AE403F1199D924200B926AB /* Build configuration list for PBXNativeTarget "bikepathTests" */;
 			buildPhases = (
+				2C44EBA3E50044C1AA8634C5 /* Check Pods Manifest.lock */,
 				8AE403D9199D924200B926AB /* Sources */,
 				8AE403DA199D924200B926AB /* Frameworks */,
 				8AE403DB199D924200B926AB /* Resources */,
+				EA0F35D4DFE74F68B575B06A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -311,6 +327,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C44EBA3E50044C1AA8634C5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77D49FAF18AA4C77B21C5606 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A006915C249549C7822ECA0A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-bikepath-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA0F35D4DFE74F68B575B06A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-bikepathTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8AE403BE199D924200B926AB /* Sources */ = {
@@ -434,6 +513,7 @@
 		};
 		8AE403EF199D924200B926AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2363F48F36466BABB5CAE6 /* Pods-bikepath.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -444,7 +524,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bikepath/bikepath-Prefix.pch";
 				INFOPLIST_FILE = "bikepath/bikepath-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					XCTest,
+				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -453,6 +537,7 @@
 		};
 		8AE403F0199D924200B926AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2363F48F36466BABB5CAE6 /* Pods-bikepath.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -463,7 +548,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bikepath/bikepath-Prefix.pch";
 				INFOPLIST_FILE = "bikepath/bikepath-Info.plist";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-framework",
+					XCTest,
+				);
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -472,6 +561,7 @@
 		};
 		8AE403F2199D924200B926AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824B528BADB64F5884CF7C26 /* Pods-bikepathTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bikepath.app/bikepath";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -494,6 +584,7 @@
 		};
 		8AE403F3199D924200B926AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 824B528BADB64F5884CF7C26 /* Pods-bikepathTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/bikepath.app/bikepath";
 				FRAMEWORK_SEARCH_PATHS = (
