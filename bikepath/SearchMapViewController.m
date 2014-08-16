@@ -9,6 +9,7 @@
 #import "SearchMapViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <MapKit/MapKit.h>
+#import "GetDirections.h"
 
 @interface SearchMapViewController ()
 
@@ -63,6 +64,7 @@
 //    [mapView_ setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
 //    NSString *urlString = [NSString stringWithFormat:@"http://maps.google.com/maps/geo?q=%@&output=CSV", "FETCH TEXT FROM SEARCH BAR" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]
 //
+    [[GetDirections alloc] init]
 }
 
 - (void)didReceiveMemoryWarning
