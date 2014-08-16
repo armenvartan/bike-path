@@ -2,10 +2,10 @@
 # platform :ios, "6.0"
 
 target "bikepath" do
-
+  pod "AFNetworking"
 end
 
 target "bikepathTests" do
-
+  pod "Kiwi"
 end
 
