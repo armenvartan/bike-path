@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09D9473E199F0705007747A6 /* GetDirections.m in Sources */ = {isa = PBXBuildFile; fileRef = 09D9473D199F0705007747A6 /* GetDirections.m */; };
 		8AB03325199DAD8A0036FF7A /* SearchMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB03324199DAD8A0036FF7A /* SearchMapViewController.m */; };
 		8AB03328199DADA80036FF7A /* ResultsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB03327199DADA80036FF7A /* ResultsMapViewController.m */; };
 		8AB0332A199DB2930036FF7A /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB03329199DB2930036FF7A /* GoogleMaps.framework */; };
@@ -53,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09D9473C199F0705007747A6 /* GetDirections.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetDirections.h; sourceTree = "<group>"; };
+		09D9473D199F0705007747A6 /* GetDirections.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetDirections.m; sourceTree = "<group>"; };
 		20477CD1EBE54049AA03F5A2 /* libPods-bikepath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bikepath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C2363F48F36466BABB5CAE6 /* Pods-bikepath.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikepath.xcconfig"; path = "Pods/Pods-bikepath.xcconfig"; sourceTree = "<group>"; };
 		824B528BADB64F5884CF7C26 /* Pods-bikepathTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikepathTests.xcconfig"; path = "Pods/Pods-bikepathTests.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +194,8 @@
 			children = (
 				8AB03323199DAD8A0036FF7A /* SearchMapViewController.h */,
 				8AB03324199DAD8A0036FF7A /* SearchMapViewController.m */,
+				09D9473C199F0705007747A6 /* GetDirections.h */,
+				09D9473D199F0705007747A6 /* GetDirections.m */,
 				8AB03326199DADA80036FF7A /* ResultsMapViewController.h */,
 				8AB03327199DADA80036FF7A /* ResultsMapViewController.m */,
 				8AE403D4199D924200B926AB /* AppDelegate.h */,
@@ -397,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AB03328199DADA80036FF7A /* ResultsMapViewController.m in Sources */,
+				09D9473E199F0705007747A6 /* GetDirections.m in Sources */,
 				8AE403D6199D924200B926AB /* AppDelegate.m in Sources */,
 				8AB03325199DAD8A0036FF7A /* SearchMapViewController.m in Sources */,
 				8AE403D2199D924200B926AB /* main.m in Sources */,

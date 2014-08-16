@@ -28,6 +28,7 @@
     GMSCameraPosition *dbc = [GMSCameraPosition cameraWithLatitude:40.706638
                                                          longitude:-74.009070
                                                               zoom:14];
+    // hard-coded for now. will move into modular file when we do the algorithm for it
     
     self.mapView.mapType = kGMSTypeNormal;
     [self.mapView setCamera:dbc];
