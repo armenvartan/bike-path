@@ -12,54 +12,8 @@
 
 @implementation AppDelegate
 
-@synthesize stationJSON = _stationJSON;
-
-- (NSArray*)loadCitiBikeData
-{
-    NSURL *url = [NSURL URLWithString:@"http://www.citibikenyc.com/stations/json"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
-                                                           cachePolicy: NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval: 120.0];
-    NSURLResponse *response = nil;
-    NSError *error = nil;
-    NSData *data = [NSURLConnection sendSynchronousRequest:request
-                          returningResponse:&response
-                                      error:&error];
-         if (data.length > 0 && error == nil)
-         {
-             NSDictionary *citiBikeJSON = [NSJSONSerialization JSONObjectWithData:data
-                                                                          options:0
-                                                                            error:NULL];
-             NSArray* stations = [citiBikeJSON objectForKey:@"stationBeanList"];
-             NSSortDescriptor *sortDescriptor;
-             sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"availableBikes"
-                                                          ascending:NO];
-             NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-             NSArray* sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
-             
-             _stationJSON = sortedStations;
-             NSLog(@"%@",_stationJSON);
-             
-             for(id st in sortedStations) {
-                 NSDictionary *station = (NSDictionary *)st;
-                 NSString *lati             = [station objectForKey:@"latitude"];
-                 NSString *longi            = [station objectForKey:@"longitude"];
-                 CLLocation *location = [[CLLocation alloc] initWithLatitude:[lati doubleValue] longitude:([longi doubleValue] *2)];
-                 NSMutableArray *locations = [[NSMutableArray alloc] init];
-                 [locations addObject:location];
-             }
-         }
-    NSLog(@"App Delegate: %@",_stationJSON);
-    return _stationJSON;
-}
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    NSURLCache *citiBikeCache = [[NSURLCache alloc] initWithMemoryCapacity:4 * 1024 * 1024
-                                                              diskCapacity:20 * 1024 * 1024
-                                                                  diskPath:nil];
-    [NSURLCache setSharedURLCache:citiBikeCache];
-        
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    
     // background color of navigation bar
     UIColor * color = [UIColor colorWithRed:255/255.0f green:251/255.0f blue:246/255.0f alpha:1.0f];
     [[UINavigationBar appearance] setBarTintColor:color];

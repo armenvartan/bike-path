@@ -10,6 +10,7 @@
 		0978B2E119A148E0007D9FAB /* GoogleAutocompleteTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0978B2E019A148E0007D9FAB /* GoogleAutocompleteTestViewController.m */; };
 		09F19F7B199FB16600825ADE /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F19F7A199FB16600825ADE /* LaunchScreenViewController.m */; };
 		3A8BE839FF5A4487AABD6EB3 /* libPods-bikepath.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15F6EAA2E00741E89CD9CA83 /* libPods-bikepath.a */; };
+		80508A7619A410B000B5DCED /* CacheStationJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 80508A7519A410B000B5DCED /* CacheStationJSON.m */; };
 		8A02797B19A04DA200F3FFC7 /* SearchItemTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A02797A19A04DA200F3FFC7 /* SearchItemTableCell.m */; };
 		8A18221C199ED28D001D7AE2 /* SearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A18221B199ED28D001D7AE2 /* SearchItem.m */; };
 		8A48A710199FC4420030F153 /* SearchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A48A70F199FC4420030F153 /* SearchListViewController.m */; };
@@ -67,6 +68,8 @@
 		09F19F7A199FB16600825ADE /* LaunchScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
 		15F6EAA2E00741E89CD9CA83 /* libPods-bikepath.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-bikepath.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		16236A47F48C4B6A876339DB /* Pods-bikepathTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bikepathTests.xcconfig"; path = "Pods/Pods-bikepathTests.xcconfig"; sourceTree = "<group>"; };
+		80508A7419A410B000B5DCED /* CacheStationJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CacheStationJSON.h; sourceTree = "<group>"; };
+		80508A7519A410B000B5DCED /* CacheStationJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CacheStationJSON.m; sourceTree = "<group>"; };
 		8A02797919A04DA200F3FFC7 /* SearchItemTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchItemTableCell.h; sourceTree = "<group>"; };
 		8A02797A19A04DA200F3FFC7 /* SearchItemTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchItemTableCell.m; sourceTree = "<group>"; };
 		8A18221A199ED28D001D7AE2 /* SearchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchItem.h; sourceTree = "<group>"; };
@@ -228,6 +231,8 @@
 				09F19F7A199FB16600825ADE /* LaunchScreenViewController.m */,
 				8AE403D4199D924200B926AB /* AppDelegate.h */,
 				8AE403D5199D924200B926AB /* AppDelegate.m */,
+				80508A7419A410B000B5DCED /* CacheStationJSON.h */,
+				80508A7519A410B000B5DCED /* CacheStationJSON.m */,
 				8A48A70E199FC4420030F153 /* SearchListViewController.h */,
 				8A48A70F199FC4420030F153 /* SearchListViewController.m */,
 				0978B2DF19A148E0007D9FAB /* GoogleAutocompleteTestViewController.h */,
@@ -448,6 +453,7 @@
 				0978B2E119A148E0007D9FAB /* GoogleAutocompleteTestViewController.m in Sources */,
 				8AE403D2199D924200B926AB /* main.m in Sources */,
 				09F19F7B199FB16600825ADE /* LaunchScreenViewController.m in Sources */,
+				80508A7619A410B000B5DCED /* CacheStationJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

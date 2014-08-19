@@ -15,6 +15,7 @@
 #import "AppDelegate.h"
 #import "StationFinder.h"
 #import "GMSMarkerFactory.h"
+#import "CacheStationJSON.h"
 
 @interface ResultsMapViewController () {
     GMSMapView *mapView_;
@@ -102,8 +103,8 @@
     // do the default view behavior
     [super viewDidLoad];
     
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDel loadCitiBikeData];
+    CacheStationJSON *cachedStationJSON = (CacheStationJSON *)[[CacheStationJSON alloc]init];
+    [cachedStationJSON loadCitiBikeData];
 
     [self initMap];
     [self getUserLocation];
