@@ -110,7 +110,6 @@
     waypoints_ = [[NSMutableArray alloc]init];
 
     // place a marker on the map at the current location of the phone
-//    NSDictionary *closestStation = [StationFinder findClosestStation:stations location:currentLocation];
     CLLocationCoordinate2D startPosition = locationManager.location.coordinate;
     GMSMarker *startPoint = [GMSMarkerFactory createGMSMarker:startPosition
                                                       mapView:mapView_

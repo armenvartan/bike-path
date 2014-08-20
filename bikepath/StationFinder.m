@@ -16,17 +16,11 @@
     
     
     CLLocationDistance smallestDistance = DBL_MAX;
-    //    CLLocation *closestLocation;
     NSDictionary *closestStation;
     
-    //        CLLocation *closestEndLocation;
-    //        NSDictionary *closestEndStation;
-    
-    for(id st in stations) {
-        NSDictionary *station      = (NSDictionary *)st;
+    for(NSDictionary *station in stations) {
         NSString *stationLatitude  = [station objectForKey:@"latitude"];
         NSString *stationLongitude = [station objectForKey:@"longitude"];
-        
         
         CLLocation *bikeStop = [[CLLocation alloc] initWithLatitude:[stationLatitude doubleValue] longitude:[stationLongitude doubleValue]];
         
@@ -38,16 +32,10 @@
             
             if (distance < smallestDistance) {
                 smallestDistance    = distance;
-                //                closestLocation     = location;
                 closestStation      = station;
             }
         }
-        
     }
-    
-    //        print it
-    //    NSLog(@"%@", closestStation);
-    
     return closestStation;
 }
 

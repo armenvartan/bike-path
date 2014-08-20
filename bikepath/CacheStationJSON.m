@@ -11,8 +11,6 @@
 
 @implementation CacheStationJSON
 
-@synthesize stationJSON = _stationJSON;
-
 + (NSData*)makeAPIRequest:(NSError*)error {
     NSMutableURLRequest *request = [NSMutableURLRequest
                                     requestWithURL:  [NSURL URLWithString:kCacheStationURL]
@@ -41,7 +39,7 @@
         [[NSSortDescriptor alloc] initWithKey:@"availableBikes" ascending:NO]];
     
     NSArray *sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
-
+    
     return sortedStations;
 }
 
