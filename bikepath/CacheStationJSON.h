@@ -8,9 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString *kCacheStationURL = @"http://www.citibikenyc.com/stations/json";
+
 @interface CacheStationJSON : NSObject
 
 @property (nonatomic, retain) NSArray *stationJSON;
-+ (NSArray*)loadCitiBikeData;
++ (NSArray*)loadCitiBikeData:(NSError *)error;
++ (NSData*)makeAPIRequest:(NSError*)error;
 
 @end

@@ -13,39 +13,49 @@
 
 @synthesize stationJSON = _stationJSON;
 
-+ (NSArray*)loadCitiBikeData{
-    NSURL *url = [NSURL URLWithString:@"http://www.citibikenyc.com/stations/json"];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL: url
-                                                           cachePolicy: NSURLRequestUseProtocolCachePolicy
-                                                       timeoutInterval: 120.0];
++ (NSData*)makeAPIRequest:(NSError*)error {
+    NSMutableURLRequest *request = [NSMutableURLRequest
+                                    requestWithURL:  [NSURL URLWithString:kCacheStationURL]
+                                    cachePolicy:     NSURLRequestUseProtocolCachePolicy
+                                    timeoutInterval: 120.0
+                                    ];
+    
     NSURLResponse *response = nil;
-    NSError *error = nil;
     NSData *data = [NSURLConnection sendSynchronousRequest:request
                                          returningResponse:&response
                                                      error:&error];
-    if (data.length > 0 && error == nil)
-    {
-        NSDictionary *citiBikeJSON = [NSJSONSerialization JSONObjectWithData:data
-                                                                     options:0
-                                                                       error:NULL];
-        NSArray* stations = [citiBikeJSON objectForKey:@"stationBeanList"];
-        NSSortDescriptor *sortDescriptor;
-        sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"availableBikes"
-                                                     ascending:NO];
-        NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-        NSArray* sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
-        
-        _stationJSON = sortedStations;
-        
-        for(id st in sortedStations) {
-            NSDictionary *station = (NSDictionary *)st;
-            NSString *lati             = [station objectForKey:@"latitude"];
-            NSString *longi            = [station objectForKey:@"longitude"];
-            CLLocation *location = [[CLLocation alloc] initWithLatitude:[lati doubleValue] longitude:([longi doubleValue] *2)];
-            NSMutableArray *locations = [[NSMutableArray alloc] init];
-            [locations addObject:location];
-        }
+    // write this data to disk
+    return data;
+}
+
++ (NSArray*)loadCitiBikeData:(NSError *)error {
+    NSData *data = [self makeAPIRequest:error];
+    
+    if(error){ return nil; }
+    
+    NSDictionary *citiBikeJSON = [NSJSONSerialization JSONObjectWithData:data
+                                                                 options:0
+                                                                   error:&error];
+    if(error){ return nil; }
+    
+    NSArray* stations = [citiBikeJSON objectForKey:@"stationBeanList"];
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"availableBikes"
+                                                 ascending:NO];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray* sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
+    
+    _stationJSON = sortedStations;
+    
+    for(id st in sortedStations) {
+        NSDictionary *station = (NSDictionary *)st;
+        NSString *lati             = [station objectForKey:@"latitude"];
+        NSString *longi            = [station objectForKey:@"longitude"];
+        CLLocation *location = [[CLLocation alloc] initWithLatitude:[lati doubleValue] longitude:([longi doubleValue] *2)];
+        NSMutableArray *locations = [[NSMutableArray alloc] init];
+        [locations addObject:location];
     }
+
     return _stationJSON;
 }
 

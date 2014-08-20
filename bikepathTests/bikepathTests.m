@@ -21,8 +21,10 @@ SPEC_BEGIN(MathSpec)
 
 describe(@"CacheStationJSON", ^{
     it(@"fetches station example", ^{
-        NSArray *stations = [CacheStationJSON loadCitiBikeData];
+        NSError *error = nil;
+        NSArray *stations = [CacheStationJSON loadCitiBikeData: error];
         NSLog(stations);
+        
     });
 });
 
