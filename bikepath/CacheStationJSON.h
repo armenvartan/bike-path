@@ -11,6 +11,6 @@
 @interface CacheStationJSON : NSObject
 
 @property (nonatomic, retain) NSArray *stationJSON;
-- (NSArray*)loadCitiBikeData;
++ (NSArray*)loadCitiBikeData;
 
 @end
