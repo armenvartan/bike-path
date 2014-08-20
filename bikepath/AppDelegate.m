@@ -8,11 +8,13 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import "CacheStationJSON.h"
 #define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    [CacheStationJSON loadCitiBikeData:nil];
     
     // background color of navigation bar
     UIColor * color = [UIColor colorWithRed:255/255.0f green:251/255.0f blue:246/255.0f alpha:1.0f];

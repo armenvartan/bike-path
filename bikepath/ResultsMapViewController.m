@@ -102,10 +102,6 @@
 - (void)viewDidLoad{
     // do the default view behavior
     [super viewDidLoad];
-    
-    CacheStationJSON *cachedStationJSON = (CacheStationJSON *)[[CacheStationJSON alloc]init];
-    [cachedStationJSON loadCitiBikeData];
-
     [self initMap];
     [self getUserLocation];
     [self updateUserLocation];
@@ -135,7 +131,7 @@
 
     
     
-    NSArray *stations = appDel.stationJSON;
+    NSArray *stations = [CacheStationJSON loadCitiBikeData:nil];
              NSLog(@"%@",stations);
 
              NSDictionary *closestStation = [StationFinder findClosestStation:stations location:currentLocation];
