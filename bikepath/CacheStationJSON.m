@@ -30,33 +30,19 @@
 
 + (NSArray*)loadCitiBikeData:(NSError *)error {
     NSData *data = [self makeAPIRequest:error];
-    
     if(error){ return nil; }
     
-    NSDictionary *citiBikeJSON = [NSJSONSerialization JSONObjectWithData:data
-                                                                 options:0
-                                                                   error:&error];
+    NSDictionary *citiBikeJSON = [NSJSONSerialization JSONObjectWithData:data options:0 error:&error];
     if(error){ return nil; }
     
     NSArray* stations = [citiBikeJSON objectForKey:@"stationBeanList"];
-    NSSortDescriptor *sortDescriptor;
-    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"availableBikes"
-                                                 ascending:NO];
-    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
-    NSArray* sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
     
-    _stationJSON = sortedStations;
+    NSArray *sortDescriptors = [NSArray arrayWithObject:
+        [[NSSortDescriptor alloc] initWithKey:@"availableBikes" ascending:NO]];
     
-    for(id st in sortedStations) {
-        NSDictionary *station = (NSDictionary *)st;
-        NSString *lati             = [station objectForKey:@"latitude"];
-        NSString *longi            = [station objectForKey:@"longitude"];
-        CLLocation *location = [[CLLocation alloc] initWithLatitude:[lati doubleValue] longitude:([longi doubleValue] *2)];
-        NSMutableArray *locations = [[NSMutableArray alloc] init];
-        [locations addObject:location];
-    }
+    NSArray *sortedStations = [stations sortedArrayUsingDescriptors:sortDescriptors];
 
-    return _stationJSON;
+    return sortedStations;
 }
 
 @end
