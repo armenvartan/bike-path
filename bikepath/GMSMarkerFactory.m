@@ -13,24 +13,26 @@
 + (GMSMarker*)createGMSMarker:(CLLocationCoordinate2D) locationCoordinates
                       mapView:(GMSMapView*) map
                         title:(NSString*) title
-                        color:(UIColor*) color{
+                        color:(UIImage*) icon{
+    
     GMSMarker *marker = [GMSMarker markerWithPosition:locationCoordinates];
     marker.title = title;
-    marker.map = map;
-    marker.icon = color;
+    marker.map   = map;
+    marker.icon  = icon;
+    
     return marker;
 }
 
 + (GMSMarker*)createGMSMarkerForStation:(CLLocationCoordinate2D) locationCoordinates
-                      mapView:(GMSMapView*) map
-                        title:(NSString*) title
-             availableSnippet:(NSString*) availableSnippet
-           unavailableSnippet:(NSString*) unavailableSnippet
-                numberOfBikes:(NSNumber*) numberOfBikes{
+                                mapView:(GMSMapView*) map
+                                  title:(NSString*) title
+                       availableSnippet:(NSString*) availableSnippet
+                     unavailableSnippet:(NSString*) unavailableSnippet
+                          numberOfBikes:(NSNumber*) numberOfBikes{
     
     GMSMarker *marker = [GMSMarker markerWithPosition:locationCoordinates];
     marker.title = title;
-    marker.map = map;
+    marker.map   = map;
     
     if ([numberOfBikes integerValue] > 3) {
         marker.icon    = [GMSMarker markerImageWithColor:[UIColor greenColor]];
